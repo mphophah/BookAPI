@@ -28,9 +28,12 @@ namespace BookAPI
         public void ConfigureServices(IServiceCollection services)
         {
 
+            // only part added to the configureServices- YOU LINK THE  BookDBContext.cs with the connection string on the appsettings.json
             services.AddDbContext<BooksDbContext>(options =>
                 options.UseSqlite(
                     Configuration.GetConnectionString("DefaultConnection")));
+            //END HERE
+
 
             services.AddControllers();
             services.AddSwaggerGen(c =>
