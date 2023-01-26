@@ -10,10 +10,10 @@ namespace BookAPI.Controllers
     // API Controller
     [ApiController]
     [Route("[controller]")]
-    public class BooksController : ControllerBase
+    public class BookController : ControllerBase
     {
         private readonly BooksDbContext _context;
-        public BooksController(BooksDbContext context)
+        public BookController(BooksDbContext context)
         {
             _context = context;
         }
